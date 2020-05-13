@@ -1,6 +1,6 @@
 import React from 'react';
 import Chat from './Chat';
 
-const App = ( ) => <Chat></Chat> //renderizando o chat
+const App = ( ) => <Chat></Chat>
 
 export default App;

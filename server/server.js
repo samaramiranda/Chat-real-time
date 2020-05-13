@@ -13,7 +13,7 @@ const SERVER_PORT = 8080;
 
 io.on('connection', socket => { //essa conexão tem um socket
   console.log('[IO] Connection => Server has a new connection')
-  //recebendo uma mensagem da chat.message e emitindo de volta para o front
+  //recebendo uma mensagem do chat.message e emitindo de volta para o front
   socket.on('chat.message', data => { //quando socket for conectado irá disparar o evento chat.message (tenho que passar esse mesmo evento no backend). Recebendo a mensagem no data
     console.log('[SOCKET] Chat.message =>', data)
     io.emit('chat.message', data)//para emitir a mensagem do backend para o frontend pelo emit
